@@ -25,15 +25,12 @@ namespace arrayInversions_nlogn
 				return y;
 			}
 		}
-
-		// Function to count Inversions
 		internal static int mergeSort(int[] arr, int array_size)
 		{
 			int[] temp = new int[array_size];
 			return tmergeSort(arr, temp, 0, array_size - 1);
 		}
 
-		// This function uses merge sort to count inversion.
 		internal static int tmergeSort(int[] arr, int[] temp, int left, int right)
 		{
 			int mid, inv_count = 0;
@@ -101,7 +98,7 @@ namespace arrayInversions_nlogn
 		public static void Main(string[] args)
 		{
 			int len = arr.Length;
-			Console.WriteLine("Inversions_count = " + mergeSort(arr, len));
+			Console.WriteLine("Inversions_count = {0}",mergeSort(arr, len));
 		}
 	}
 }
